@@ -30,10 +30,10 @@
         {% block contenidoQueCambia %}
         
         <br>
-        <h1> Dar de alta Profesores </h1>
+        <h1> Dar de alta Cursos </h1>
         <br>
-        
-        {% if miFormulario.errors %}
+
+        {% if miFormularioC.errors %}
         Están mal los datos
         {% endif %}
 
@@ -41,7 +41,7 @@
         <form action="" method="Post">{% csrf_token %}
 
             <table>
-                {{Formulario.as_table}}
+                {{FormularioC.as_table}}
             </table>
 
             <input type="submit" value ="Enviar">

@@ -30,20 +30,25 @@
         {% block contenidoQueCambia %}
         
         <br>
-        <h1> Dar de alta Profesores </h1>
+        <h1> Buscar </h1>
         <br>
         
-        {% if miFormulario.errors %}
-        Están mal los datos
-        {% endif %}
-
-
-        <form action="" method="Post">{% csrf_token %}
-
+        <form action="" method="POST">{% csrf_token %}
+        
             <table>
                 {{Formulario.as_table}}
             </table>
+            <br>
+        
+            <input type="submit" value="Buscar">
 
-            <input type="submit" value ="Enviar">
+            <ul>
+                {% for curso in cursos %}
+                <li>{{ curso.nombre }} - {{ curso.camada }}</li>
+                {% endfor %}
+            </ul>
+        
+        </form>
+        
 
         {% endblock contenidoQueCambia %}

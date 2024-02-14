@@ -28,12 +28,12 @@
         </nav>
         
         {% block contenidoQueCambia %}
-        
+       
         <br>
-        <h1> Dar de alta Profesores </h1>
+        <h1> Por favor comentarnos si hay otras actividades extracurriculares que le interesarían</h1>
         <br>
-        
-        {% if miFormulario.errors %}
+
+        {% if miFormularioA.errors %}
         Están mal los datos
         {% endif %}
 
@@ -41,9 +41,9 @@
         <form action="" method="Post">{% csrf_token %}
 
             <table>
-                {{Formulario.as_table}}
+                {{FormularioA.as_table}}
             </table>
 
             <input type="submit" value ="Enviar">
-
+            
         {% endblock contenidoQueCambia %}
